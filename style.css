@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* - - - - - > Div avec background linear gradient < - - - - - */
+.gradient {
+    box-sizing: border-box;
+    width: 35em;
+    height: 20em;
+    border-radius: 20px;
+    background-image: linear-gradient(140deg, #5BDCF9, #61BAE9, #3941F3, #5839F3, #8D5BF9, #C45BF9, #F9B65B, yellow);
+    background-size: 350%;
+    animation: moving-bg 3s linear infinite;
+    position: relative;
+}
+
+/* - - - - - > Div de superposition < - - - - - */
+.text {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34em;
+    height: 19em;
+    border-radius: 20px;
+    background-color: #111;
+    border: 4px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text p {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@keyframes moving-bg {
+    0% {
+        background-position: 0;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+
+
